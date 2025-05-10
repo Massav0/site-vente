@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finaliser votre commande | Guide Concevoir un Garçon</title>
+  <meta name="description" content="Processus de paiement sécurisé pour le guide complet sur la conception d'un garçon.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/payment-page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+  <script src="js/validation.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 12a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5c0-8-7-9-10-3-3-6-10-5-10 3Z"></path>
+        </svg>
+        <span class="logo-text">EpanouissementGlobal</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main payment-page">
+    <section class="payment-section">
+      <div class="container">
+        <div class="checkout-container">
+          <div class="checkout-header">
+            <h1>Finaliser votre commande</h1>
+            <div class="security-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Paiement 100% sécurisé</span>
+            </div>
+          </div>
+          
+          <div class="checkout-flex">
+            <div class="checkout-form">
+              <form id="payment-form" onsubmit="return validateForm(event)">
+                <div class="form-section">
+                  <h3>Informations personnelles - Email de réception du eBook</h3>
+                  
+                  
+                  
+                  <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="email-error"></div>
+                  </div>
+                </div>
+                
+                
+                
+                <div class="form-section terms-section">
+                  <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">J'accepte les <a href="#" target="_blank">Conditions Générales de Vente</a> <span class="required">*</span></label>
+                    <div class="error-message" id="terms-error"></div>
+                  </div>
+                </div>
+                
+                <div class="submit-section">
+                  <button onclick="window.location.href='https://me.fedapay.com/PQy2s7Ay'"  class="submit-button">Payer maintenant 4999 FCFA</button>
+                  <p class="security-note">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    Paiement 100% sécurisé via SSL | Vos données sont cryptées
+                  </p>
+                </div>
+              </form>
+            </div>
+            
+            <div class="order-summary">
+              <h3>Récapitulatif de commande</h3>
+              
+              <div class="product-summary">
+                <img src="assets/images/1.png" alt="Couverture de l'ebook Concevoir un Garçon" class="summary-img">
+                <div class="product-info">
+                  <h4>Guide Complet: Concevoir un Garçon Naturellement</h4>
+                  <p class="product-format">Format: Ebook PDF</p>
+                </div>
+              </div>
+              
+              <div class="price-summary">
+                <div class="price-row">
+                  <span>Prix:</span>
+                  <span>4999 FCFA</span>
+                </div>
+                <div class="price-row">
+                  <span>TVA (Aucun)</span>
+                  <span>0 FCFA</span>
+                </div>
+                <div class="price-row total">
+                  <span>Total:</span>
+                  <span>4999 FCFA</span>
+                </div>
+              </div>
+              
+              <div class="delivery-info">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v8"></path>
+                  <path d="m4.93 10.93 1.41 1.41"></path>
+                  <path d="M2 18h2"></path>
+                  <path d="M20 18h2"></path>
+                  <path d="m19.07 10.93-1.41 1.41"></path>
+                  <path d="M22 22H2"></path>
+                  <path d="m16 6-4 4-4-4"></path>
+                  <path d="M16 18a4 4 0 0 0-8 0"></path>
+                </svg>
+                <div class="delivery-text">
+                  <h4>Livraison instantanée</h4>
+                  <p>Accès immédiat après paiement</p>
+                </div>
+              </div>
+              
+              <div class="guarantee-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <p>Garantie satisfait ou remboursé 7 jours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5c0-8-7-9-10-3-3-6-10-5-10 3Z"></path>
+          </svg>
+          <span>EpanouissementGlobal</span>
+        </div>
+        <p class="copyright">© 2025 EpanouissementGlobal. Tous droits réservés.</p>
+        <div class="footer-links">
+          <a href="#">Conditions Générales</a>
+          <a href="#">Politique de Confidentialité</a>
+          <a href="contact@epanouissement.shop">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

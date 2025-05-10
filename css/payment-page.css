@@ -1,0 +1,229 @@
+/* Payment Page Specific Styles */
+.payment-page {
+  background-color: var(--body-bg);
+}
+
+.payment-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.checkout-container {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--light-border);
+}
+
+.checkout-header h1 {
+  margin-bottom: 0;
+}
+
+.security-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.checkout-flex {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.checkout-form {
+  flex: 1.5;
+}
+
+.order-summary {
+  flex: 1;
+  background-color: var(--light-border);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  align-self: flex-start;
+  position: sticky;
+  top: calc(60px + var(--spacing-xl));
+}
+
+.form-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.form-section h3 {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--light-border);
+}
+
+.payment-icons {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.payment-icons img {
+  height: 30px;
+  object-fit: contain;
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.form-group.checkbox input {
+  width: auto;
+}
+
+.form-group.checkbox label {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.submit-section {
+  margin-top: var(--spacing-xl);
+}
+
+.submit-button {
+  background-color: var(--success-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color var(--animation-speed-normal) ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.product-summary {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.summary-img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+}
+
+.product-info h4 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.product-format {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.price-summary {
+  margin-bottom: var(--spacing-lg);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.price-row.total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.delivery-info {
+  display: flex;
+  gap: var(--spacing-md);
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.delivery-info svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.delivery-text h4 {
+  margin-bottom: var(--spacing-xs);
+  font-size: 1rem;
+}
+
+.delivery-text p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.guarantee-box {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--secondary-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm);
+}
+
+.guarantee-box svg {
+  color: var(--success-color);
+  flex-shrink: 0;
+}
+
+.guarantee-box p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary-dark);
+}
+
+@media (max-width: 1024px) {
+  .checkout-flex {
+    flex-direction: column;
+  }
+  
+  .order-summary {
+    position: static;
+    margin-top: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .payment-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .delivery-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
